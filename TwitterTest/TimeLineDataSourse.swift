@@ -24,7 +24,7 @@ class TimeLineDataSource: NSObject, UITableViewDataSource{
                                 URL: URL,
                                 parameters: nil)
         
-        request.account = TimeLineViewController().twitterAccount
+  //      request.account = TimeLineViewController().twitterAccount
         
         request.performRequestWithHandler { (responseData, urlResponse, error) -> Void in
             
