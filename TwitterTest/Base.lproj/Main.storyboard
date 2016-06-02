@@ -27,11 +27,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MKa-8s-hhR" firstAttribute="centerY" secondItem="iod-9c-s35" secondAttribute="centerY" id="8WP-TW-t5G"/>
-                            <constraint firstItem="MKa-8s-hhR" firstAttribute="centerX" secondItem="iod-9c-s35" secondAttribute="centerX" id="TTb-cQ-QNJ"/>
+                            <constraint firstItem="MKa-8s-hhR" firstAttribute="centerY" secondItem="iod-9c-s35" secondAttribute="centerY" id="Ayh-n7-CeC"/>
+                            <constraint firstItem="MKa-8s-hhR" firstAttribute="centerX" secondItem="iod-9c-s35" secondAttribute="centerX" id="kog-BZ-TvM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BsL-Hx-fpJ"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="mySegue" id="nx5-bA-uAy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbX-GE-SCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +57,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLineCell" rowHeight="109" id="JY7-7R-1U4">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="109"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JY7-7R-1U4" id="200-3m-gLT">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="108"/>
@@ -81,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="194" y="737"/>
+            <point key="canvasLocation" x="209" y="737"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yhd-0p-YyZ">

@@ -52,20 +52,37 @@ class  LoginViewController: UIViewController {
         let alert = UIAlertController(title: "Twitter",
                                       message: "アカウントを選択してください",
                                       preferredStyle: .ActionSheet)
-        //
+        
+        //取得したアカウント分actionSheetに表示する
         for account in accounts{
-            alert.addAction(UIAlertAction(title: account.username,
-                style: .Default,
-                handler: {
+            alert.addAction(UIAlertAction(title: account.username, style: .Default, handler: {
                     (action:UIAlertAction!) -> Void in
                     print("your select account is \(account)")
                     self.twitterAccount = account
+                    self.transitionTimeLine()   //transitionTimeLineメソッドの呼び出し
             }))
         }
         
         //キャンセルボタンの表示
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         
-        self.presentViewController(alert, animated: true, completion: nil)
+        //actionSheetの表示
+        presentViewController(alert, animated: true, completion: nil)
     }
+
+    //TimeLineViewControllerに遷移and値を渡す
+    func transitionTimeLine(){
+        self.performSegueWithIdentifier("mySegue", sender: nil)
+    }
+    
+ /*   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "mySegue"{
+      //      if let timeLineView: TimeLineViewController = segue.destinationViewController as TimeLineViewController
+            if let vc = segue.destinationViewController as? TimeLineViewController{
+                    vc._twAccount = _twitterAccount
+            }
+  //          timeLineView._timeLine = twitterAccount
+        }
+    }
+*/    
 }

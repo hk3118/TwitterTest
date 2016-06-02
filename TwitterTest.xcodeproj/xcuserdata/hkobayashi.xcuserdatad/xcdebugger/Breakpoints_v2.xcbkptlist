@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterTest/LoginViewController.swift"
+            timestampString = "486551471.038372"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "selectTwitterAccount(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterTest.LoginViewController.(selectTwitterAccount in _4DC016812B3DA389A16E711B3157AA18) (Swift.Array&lt;__ObjC.ACAccount&gt;) -&gt; ()"
+                  moduleName = "TwitterTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hkobayashi/Dropbox/TwitterTest/TwitterTest/LoginViewController.swift"
+                  timestampString = "486551473.048779"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "1140">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterTest.LoginViewController.((selectTwitterAccount in _4DC016812B3DA389A16E711B3157AA18) (Swift.Array&lt;__ObjC.ACAccount&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "TwitterTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hkobayashi/Dropbox/TwitterTest/TwitterTest/LoginViewController.swift"
+                  timestampString = "486551473.14516"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "460">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

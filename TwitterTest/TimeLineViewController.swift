@@ -16,6 +16,10 @@ class TimeLineViewController: UIViewController, UITableViewDelegate{
     @IBOutlet weak var TableView: UITableView!
     
     private let dataSource: TimeLineDataSource = TimeLineDataSource()
+    
+    private let _twAccount = ""
+    
+    
     /*
     var accountStore = ACAccountStore()
     var twitterAccount : ACAccount?
