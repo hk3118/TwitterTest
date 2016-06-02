@@ -16,7 +16,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate{
     @IBOutlet weak var TableView: UITableView!
     
     private let dataSource: TimeLineDataSource = TimeLineDataSource()
-    
+    /*
     var accountStore = ACAccountStore()
     var twitterAccount : ACAccount?
     
@@ -68,7 +68,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate{
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         
         self.presentViewController(alert, animated: true, completion: nil)
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,8 +76,6 @@ class TimeLineViewController: UIViewController, UITableViewDelegate{
         //
         TableView.dataSource = TimeLineDataSource()
         
-        //LoginクラスのgetTwitterAccountメソッドの呼び出し
-        getTwitterAccount()
         
         TableView.dataSource = self.dataSource
         TableView.reloadData()
