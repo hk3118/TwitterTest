@@ -13,7 +13,9 @@ import Social
 class TimeLineDataSource: NSObject, UITableViewDataSource{
     
     let data = ["iphone", "ipad", "ipod", "macbook"]
-    var tweet = []
+    private var tweet = []
+    
+//    var hogehoge =  TimeLineViewController().receivedTwitterAccount
     
     private func getTweet(){
         //APIのURLの指定
@@ -24,8 +26,9 @@ class TimeLineDataSource: NSObject, UITableViewDataSource{
                                 URL: URL,
                                 parameters: nil)
         
-  //      request.account = TimeLineViewController().twitterAccount
+ //       request.account = hogehoge
         
+        //APIコールの実行
         request.performRequestWithHandler { (responseData, urlResponse, error) -> Void in
             
             if error != nil {
@@ -48,12 +51,12 @@ class TimeLineDataSource: NSObject, UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return tweet.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TimeLineCell", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel?.text = data[indexPath.row]
+        cell.textLabel?.text = tweet[indexPath.row]
         return cell
     }
 }

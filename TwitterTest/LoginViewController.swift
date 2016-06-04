@@ -55,11 +55,13 @@ class  LoginViewController: UIViewController {
         
         //取得したアカウント分actionSheetに表示する
         for account in accounts{
+            //ボタンの表示
             alert.addAction(UIAlertAction(title: account.username, style: .Default, handler: {
                     (action:UIAlertAction!) -> Void in
+                    //タップされた際の挙動
                     print("your select account is \(account)")
                     self.twitterAccount = account
-                    self.transitionTimeLine()   //transitionTimeLineメソッドの呼び出し
+                    self.performSegueWithIdentifier("mySegue", sender: nil)
             }))
         }
         
@@ -70,19 +72,14 @@ class  LoginViewController: UIViewController {
         presentViewController(alert, animated: true, completion: nil)
     }
 
-    //TimeLineViewControllerに遷移and値を渡す
-    func transitionTimeLine(){
-        self.performSegueWithIdentifier("mySegue", sender: nil)
-    }
-    
- /*   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    //TimeLineViewControllerに
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //もしmySegur のSegueが起動された場合
         if segue.identifier == "mySegue"{
-      //      if let timeLineView: TimeLineViewController = segue.destinationViewController as TimeLineViewController
-            if let vc = segue.destinationViewController as? TimeLineViewController{
-                    vc._twAccount = _twitterAccount
+            //もし遷移先がTimeLineViewControllerの場合
+            if let vc: TimeLineViewController = segue.destinationViewController as? TimeLineViewController{
+                vc.receivedTwitterAccount = twitterAccount
             }
-  //          timeLineView._timeLine = twitterAccount
         }
     }
-*/    
 }
