@@ -18,14 +18,16 @@ class TimeLineViewController: UIViewController, UITableViewDelegate{
     /* private let dataSource: TimeLineDataSource = TimeLineDataSource() */
     private let dataSource = TimeLineDataSource()
     
+    //LoginViewControllerからログインしたアカウントの情報の受け口
     var receivedTwitterAccount: ACAccount?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(receivedTwitterAccount!)
         
         TableView.dataSource = self.dataSource
+        dataSource.twAccount = receivedTwitterAccount
+        
+        dataSource.getTweet()
         TableView.reloadData()
     }
     

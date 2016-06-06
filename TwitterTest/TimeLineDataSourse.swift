@@ -12,21 +12,25 @@ import Social
 
 class TimeLineDataSource: NSObject, UITableViewDataSource{
     
-    let data = ["iphone", "ipad", "ipod", "macbook"]
-    private var tweet = []
     
-//    var hogehoge =  TimeLineViewController().receivedTwitterAccount
+    private var tweet = ["iphone", "ipad", "ipod", "macbook"]
     
-    private func getTweet(){
+    //TimeLineViewCotrollerからログインアカウント情報の受取り
+    var twAccount: ACAccount!
+    
+    func getTweet(){
+        
         //APIのURLの指定
         let URL = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")
         
+        //リクエストの情報の生成
         let request = SLRequest(forServiceType: SLServiceTypeTwitter,
                                 requestMethod: .GET,
                                 URL: URL,
                                 parameters: nil)
         
- //       request.account = hogehoge
+        //認証したアカウントの設定
+        request.account = twAccount
         
         //APIコールの実行
         request.performRequestWithHandler { (responseData, urlResponse, error) -> Void in
@@ -36,6 +40,7 @@ class TimeLineDataSource: NSObject, UITableViewDataSource{
             }
             else {
                 // 結果の表示
+                /*
                 do {
                     let result = try NSJSONSerialization.JSONObjectWithData(responseData,
                         options: .AllowFragments) as! NSDictionary
@@ -44,6 +49,11 @@ class TimeLineDataSource: NSObject, UITableViewDataSource{
                     
                 } catch {
                     return
+                }
+                */
+                print(self.twAccount)
+                if let result = try? NSJSONSerialization.JSONObjectWithData(responseData, options: .AllowFragments) as! NSDictionary{
+                    print("result is \(result)")
                 }
             }
         }

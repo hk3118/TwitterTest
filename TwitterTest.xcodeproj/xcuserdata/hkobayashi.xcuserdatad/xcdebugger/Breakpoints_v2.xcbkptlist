@@ -51,5 +51,84 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterTest/TimeLineViewController.swift"
+            timestampString = "486873119.137592"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "TimeLineViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterTest.TimeLineViewController.receivedTwitterAccount.setter : Swift.Optional&lt;__ObjC.ACAccount&gt;"
+                  moduleName = "TwitterTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hkobayashi/Dropbox/TwitterTest/TwitterTest/TimeLineViewController.swift"
+                  timestampString = "486869008.940723"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterTest.TimeLineViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; TwitterTest.TimeLineViewController"
+                  moduleName = "TwitterTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hkobayashi/Dropbox/TwitterTest/TwitterTest/TimeLineViewController.swift"
+                  timestampString = "486869008.94091"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "181">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterTest.TimeLineViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TwitterTest.TimeLineViewController&gt;"
+                  moduleName = "TwitterTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hkobayashi/Dropbox/TwitterTest/TwitterTest/TimeLineViewController.swift"
+                  timestampString = "486869008.941041"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "113">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterTest/TimeLineDataSourse.swift"
+            timestampString = "486905108.767728"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "getTweet()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
