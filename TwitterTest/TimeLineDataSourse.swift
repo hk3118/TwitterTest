@@ -13,7 +13,8 @@ import Social
 class TimeLineDataSource: NSObject, UITableViewDataSource{
     
     
-    private var tweet = ["iphone", "ipad", "ipod", "macbook"]
+//    private var tweet = ["iphone", "ipad", "ipod", "macbook"]
+    var tweets = []
     
     //TimeLineViewCotrollerからログインアカウント情報の受取り
     var twAccount: ACAccount!
@@ -52,8 +53,8 @@ class TimeLineDataSource: NSObject, UITableViewDataSource{
                 }
                 */
                 print(self.twAccount)
-                if let result = try? NSJSONSerialization.JSONObjectWithData(responseData, options: .AllowFragments) as! NSDictionary{
-                    print("result is \(result)")
+                if let result = try? NSJSONSerialization.JSONObjectWithData(responseData, options: .AllowFragments) as? [AnyObject] {
+                    print("result is \(result!)")
                 }
             }
         }
@@ -61,12 +62,18 @@ class TimeLineDataSource: NSObject, UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tweet.count
+        return tweets.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TimeLineCell", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel?.text = tweet[indexPath.row]
-        return cell
+        let tweet = tweets[indexPath.row] as! Dictionary<String,AnyObject>
+        let text = tweet["text"] as! String
+        
+        let aCell = cell
+        aCell.textLabel?.text = text
+        
+ //       cell.textLabel?.text = tweets[indexPath.row] as! String
+        return aCell
     }
 }

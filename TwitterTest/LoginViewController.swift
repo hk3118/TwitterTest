@@ -42,8 +42,12 @@ class  LoginViewController: UIViewController {
                 return
             }
             
-            //ActionSheetを表示
-            self.selectTwitterAccount(accounts)
+            dispatch_async(
+                dispatch_get_main_queue(), {
+                    //ActionSheetを表示
+                    self.selectTwitterAccount(accounts)
+                }
+            );
         }
     }
     
@@ -75,7 +79,7 @@ class  LoginViewController: UIViewController {
     //TimeLineViewControllerに
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //もしmySegur のSegueが起動された場合
-        if segue.identifier == "mySegue"{
+        if segue.identifier == "mySegue" {
             //もし遷移先がTimeLineViewControllerの場合
             if let vc: TimeLineViewController = segue.destinationViewController as? TimeLineViewController{
                 vc.receivedTwitterAccount = twitterAccount
